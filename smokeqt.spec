@@ -8,7 +8,7 @@ License: GPL
 URL:     http://www.kde.org
 Source:  ftp://ftp.kde.org/pub/kde/stable/%version/src/%name-%version.tar.bz2
 
-#BuildRequires: smokegen-devel >= 1:%version
+BuildRequires: smokegen-devel >= 1:%version
 BuildRequires: qimageblitz-devel
 BuildRequires: qscintilla-qt4-devel 
 
