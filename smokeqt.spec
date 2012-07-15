@@ -411,6 +411,7 @@ Devel headers for %{name}
 %_kde_libdir/libsmokeqtxmlpatterns.so
 %_kde_datadir/smokegen/qt-config.xml
 %_kde_datadir/smokegen/qtdefines
+%_datadir/smoke
 
 #------------------------------------------------------------
 
