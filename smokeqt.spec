@@ -1,12 +1,18 @@
 Name:		smokeqt
 Summary:	Qt Bindings for SMOKE
-Version:	4.9.4
+Version:	4.9.98
 Release:	1
 Epoch:		1
 Group:		Development/KDE and Qt
 License:	GPL
 URL:		http://www.kde.org
-Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
+%define is_beta %(if test `echo %version |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
+%if %is_beta
+%define ftpdir unstable
+%else
+%define ftpdir stable
+%endif
+Source:		ftp://ftp.kde.org/pub/kde/%ftpdir/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	smokegen-devel >= 1:%{version}
 BuildRequires:	pkgconfig(qimageblitz)
 BuildRequires:	qscintilla-qt4-devel

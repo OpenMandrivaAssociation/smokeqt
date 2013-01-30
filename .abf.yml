@@ -1,3 +1,4 @@
----
-sources:
+removed_sources:
   smokeqt-4.9.4.tar.xz: 171b3c1cc0e7986ffb2d96a9ff844300e98746bf
+sources:
+  smokeqt-4.9.98.tar.xz: 768672c453d651adc05c613626a61266a39e458a
