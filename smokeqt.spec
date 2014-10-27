@@ -1,21 +1,21 @@
-Name:		smokeqt
 Summary:	Qt Bindings for SMOKE
+Name:		smokeqt
 Version:	4.14.2
-Release:	1
+Release:	2
 Epoch:		1
+License:	GPLv2+
 Group:		Development/KDE and Qt
-License:	GPL
-URL:		http://www.kde.org
+Url:		http://www.kde.org
 %define is_beta %(if test `echo %version |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
 %if %{is_beta}
 %define ftpdir unstable
 %else
 %define ftpdir stable
 %endif
-Source:		ftp://ftp.kde.org/pub/kde/%{ftpdir}/%{version}/src/%{name}-%{version}.tar.xz
-BuildRequires:	smokegen-devel >= 1:%{version}
-BuildRequires:	pkgconfig(qimageblitz)
+Source0:	ftp://ftp.kde.org/pub/kde/%{ftpdir}/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	qscintilla-qt4-devel
+BuildRequires:	smokegen-devel >= 1:%{version}
+BuildRequires:	pkgconfig(qimageblitz) < 5.0.0
 
 %description
 Qt Bindings for SMOKE (Scripting Meta Object Kompiler Engine)
@@ -412,6 +412,9 @@ Devel headers for %{name}
 %makeinstall_std -C build
 
 %changelog
+* Mon Oct 27 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.14.2-2
+- Use pkgconfig(qimageblitz) < 5.0.0 to force Qt4 version
+
 * Wed Oct 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.14.2-1
 - New version 4.14.2
 
