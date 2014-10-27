@@ -1,7 +1,7 @@
 Name:		smokeqt
 Summary:	Qt Bindings for SMOKE
 Version:	4.14.2
-Release:	1
+Release:	2
 Epoch:		1
 Group:		Development/KDE and Qt
 License:	GPL
@@ -14,7 +14,7 @@ URL:		http://www.kde.org
 %endif
 Source:		ftp://ftp.kde.org/pub/kde/%{ftpdir}/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	smokegen-devel >= 1:%{version}
-BuildRequires:	pkgconfig(qimageblitz)
+BuildRequires:	pkgconfig(qimageblitz) < 5.0.0-0
 BuildRequires:	qscintilla-qt4-devel
 
 %description
