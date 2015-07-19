@@ -1,7 +1,7 @@
 Summary:	Qt Bindings for SMOKE
 Name:		smokeqt
 Version:	4.14.3
-Release:	2
+Release:	3
 Epoch:		1
 License:	GPLv2+
 Group:		Development/KDE and Qt
